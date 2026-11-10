@@ -69,6 +69,14 @@ Abre http://localhost:3000/admin. Te pide una contraseña que se configura en `.
 - `app/admin/actions.js` inicia sesión, cierra sesión y cambia el estado de un pedido, revisando la sesión otra vez.
 - La contraseña nunca está en el código. El navegador solo guarda una huella (hash) en una cookie que JavaScript no puede leer.
 
+## Paso 6: pruebas y seguridad
+
+- `npm test` corre las pruebas del carrito, de los pedidos y de la sesión del panel.
+- `npm run check` corre las pruebas y además busca secretos escritos por error en el código.
+- `CHECKLIST.md` es la lista de seguridad. Revísala antes de cada publicación.
+
+**Si una prueba falla:** lee el nombre de la prueba y el valor que esperaba. Te dice qué regla se rompió.
+
 ## Licencia
 
 MIT. Úsalo, cámbialo y construye tu propio producto con él.
