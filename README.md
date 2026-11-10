@@ -61,6 +61,14 @@ viviera en el carrito, cualquiera podría cambiarlo desde su navegador.
 
 **Prueba:** haz un pedido sin teléfono. Luego uno con delivery y sin dirección. El servidor debe rechazarlos.
 
+## Paso 5: el panel de la tienda
+
+Abre http://localhost:3000/admin. Te pide una contraseña que se configura en `.env.local` como `ADMIN_PASSWORD`.
+
+- `middleware.js` revisa la sesión antes de abrir cualquier página de `/admin`.
+- `app/admin/actions.js` inicia sesión, cierra sesión y cambia el estado de un pedido, revisando la sesión otra vez.
+- La contraseña nunca está en el código. El navegador solo guarda una huella (hash) en una cookie que JavaScript no puede leer.
+
 ## Licencia
 
 MIT. Úsalo, cámbialo y construye tu propio producto con él.
