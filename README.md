@@ -33,6 +33,13 @@ Abre http://localhost:3000. Si ves "¡Funciona!", terminaste el paso 1.
 **Si algo falla:** lee el último mensaje rojo de la terminal. "command not found: npm" quiere decir que falta
 Node.js. "Port 3000 is in use" quiere decir que ya hay algo corriendo: ciérralo o usa `npm run dev -- -p 3001`.
 
+## Paso 2: el menú
+
+Los productos están en `data/products.json`. Cada uno tiene un `id`, nombre, descripción, precio, categoría y si está
+disponible. La portada (`app/page.js`) los agrupa por categoría y cada uno tiene su página (`app/producto/[id]/page.js`).
+
+**Prueba:** cambia el precio de un plato en el archivo, guarda y recarga la página. Agrega un producto tuyo.
+
 ## Licencia
 
 MIT. Úsalo, cámbialo y construye tu propio producto con él.

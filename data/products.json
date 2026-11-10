@@ -1,0 +1,8 @@
+[
+  { "id": "aji-de-gallina", "name": "Ají de gallina", "description": "Con arroz blanco, papa y aceituna. Porción para una persona.", "price": 22, "category": "Menú del día", "emoji": "🍛", "available": true },
+  { "id": "lomo-saltado", "name": "Lomo saltado", "description": "Carne salteada con cebolla, tomate y papas fritas. Con arroz.", "price": 26, "category": "Menú del día", "emoji": "🥩", "available": true },
+  { "id": "arroz-con-pollo", "name": "Arroz con pollo", "description": "Arroz verde con presa de pollo y salsa criolla.", "price": 22, "category": "Menú del día", "emoji": "🍗", "available": true },
+  { "id": "causa-limena", "name": "Causa limeña", "description": "Papa amarilla con pollo y palta. Entrada.", "price": 12, "category": "Entradas", "emoji": "🥔", "available": true },
+  { "id": "chicha-morada", "name": "Chicha morada", "description": "Jarra de 1 litro.", "price": 8, "category": "Bebidas", "emoji": "🥤", "available": true },
+  { "id": "mazamorra", "name": "Mazamorra morada", "description": "Postre en vaso de 250 ml.", "price": 6, "category": "Postres", "emoji": "🍮", "available": false }
+]
