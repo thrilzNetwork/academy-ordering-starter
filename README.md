@@ -77,6 +77,11 @@ Abre http://localhost:3000/admin. Te pide una contraseña que se configura en `.
 
 **Si una prueba falla:** lee el nombre de la prueba y el valor que esperaba. Te dice qué regla se rompió.
 
+## Paso 7: publicar
+
+Sigue `DEPLOY.md`: conecta tu repositorio a Netlify o Vercel, agrega las variables de entorno y verifica la tienda
+publicada con la lista del final.
+
 ## Licencia
 
 MIT. Úsalo, cámbialo y construye tu propio producto con él.
