@@ -24,7 +24,7 @@ export default async function Admin() {
       </div>
       {storeMode === "demo" && <p className="notice">Modo demo: los pedidos se guardan en memoria y se borran al reiniciar. Configura Supabase para guardarlos de verdad.</p>}
       {failed && <p className="notice" role="alert">No se pudieron leer los pedidos. Revisa la conexión con la base de datos.</p>}
-      <p className="muted">Hoy: {todays.length} pedidos · {money(todays.reduce((a, o) => a + Number(o.total), 0), STORE.currency)}</p>
+      <p className="muted">Hoy: {todays.length} {todays.length === 1 ? "pedido" : "pedidos"} · {money(todays.reduce((a, o) => a + Number(o.total), 0), STORE.currency)}</p>
       {orders.length === 0 ? <p className="card">Todavía no hay pedidos.</p> : (
         <div className="card" style={{ overflowX: "auto" }}>
           <table>
