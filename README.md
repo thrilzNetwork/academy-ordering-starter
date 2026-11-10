@@ -82,6 +82,15 @@ Abre http://localhost:3000/admin. Te pide una contraseña que se configura en `.
 Sigue `DEPLOY.md`: conecta tu repositorio a Netlify o Vercel, agrega las variables de entorno y verifica la tienda
 publicada con la lista del final.
 
+## Paso 8: operar
+
+Una aplicación publicada hay que mantenerla viva:
+
+- `/api/health` responde si la tienda y su base de datos funcionan. Conéctale un servicio de monitoreo gratuito.
+- El hosting guarda un registro de errores. Revísalo una vez por semana.
+- `COSTS.md` es la hoja de costos. Llénala con los precios reales de tus proveedores y llévala al Laboratorio de Economía
+  Tecnológica de Attenda Academy para ver cuándo sube cada costo.
+
 ## Licencia
 
 MIT. Úsalo, cámbialo y construye tu propio producto con él.
