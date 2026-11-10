@@ -40,6 +40,16 @@ disponible. La portada (`app/page.js`) los agrupa por categoría y cada uno tien
 
 **Prueba:** cambia el precio de un plato en el archivo, guarda y recarga la página. Agrega un producto tuyo.
 
+## Paso 3: el carrito
+
+- `lib/cart.js`: funciones del carrito (agregar, cambiar cantidad, total). No tocan la pantalla, así que se pueden probar.
+- `lib/cart.test.js`: las pruebas. Córrelas con `npm test`.
+- `components/CartProvider.js`: guarda el carrito en el navegador para que no se pierda al recargar.
+- `app/carrito/page.js`: el resumen del pedido.
+
+**Regla importante:** el carrito guarda solo el `id` y la cantidad. El precio siempre se lee del catálogo. Si el precio
+viviera en el carrito, cualquiera podría cambiarlo desde su navegador.
+
 ## Licencia
 
 MIT. Úsalo, cámbialo y construye tu propio producto con él.

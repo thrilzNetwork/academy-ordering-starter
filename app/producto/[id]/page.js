@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { allProducts, findProduct, money } from "../../../lib/products";
 import { STORE } from "../../../lib/config";
+import AddToCart from "../../../components/AddToCart";
 
 export function generateStaticParams() {
   return allProducts().map((p) => ({ id: p.id }));
@@ -17,7 +18,7 @@ export default async function ProductPage({ params }) {
       <h1>{p.name}</h1>
       <p className="muted">{p.description}</p>
       <p className="price">{money(p.price, STORE.currency)}</p>
-      {!p.available && <p className="notice">Agotado por hoy.</p>}
+      {p.available ? <AddToCart id={p.id} /> : <p className="notice">Agotado por hoy.</p>}
     </div>
   );
 }
