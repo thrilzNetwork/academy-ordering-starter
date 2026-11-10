@@ -1,0 +1,38 @@
+# Tienda de pedidos: proyecto de práctica de Attenda Academy
+
+Una tienda de pedidos sencilla para aprender a construir, publicar y operar una aplicación. Es el proyecto de la
+**Misión 5** de Attenda Academy. Usa datos inventados y un pago **simulado**: no cobra dinero real.
+
+Cada paso de la misión tiene su propia rama. Si te trabas, compara tu código con la rama del paso o salta a ella.
+
+| Rama | Lo que agrega |
+| --- | --- |
+| `step-01-setup` | El proyecto corriendo en tu computadora |
+| `step-02-catalog` | El menú y la página de cada producto |
+| `step-03-cart` | El carrito y el resumen del pedido |
+| `step-04-orders` | Guardar pedidos, pago simulado y envío por WhatsApp |
+| `step-05-admin` | Panel con contraseña para ver y cambiar pedidos |
+| `step-06-checks` | Pruebas y lista de seguridad |
+| `step-07-deploy` | Publicar en internet |
+| `step-08-operate` | Operar, revisar uso y calcular costos |
+
+## Paso 1: ponlo a correr
+
+Necesitas [Node.js](https://nodejs.org) 20 o más nuevo y [Git](https://git-scm.com).
+
+```bash
+git clone https://github.com/thrilzNetwork/academy-ordering-starter.git
+cd academy-ordering-starter
+git checkout step-01-setup
+npm install
+npm run dev
+```
+
+Abre http://localhost:3000. Si ves "¡Funciona!", terminaste el paso 1.
+
+**Si algo falla:** lee el último mensaje rojo de la terminal. "command not found: npm" quiere decir que falta
+Node.js. "Port 3000 is in use" quiere decir que ya hay algo corriendo: ciérralo o usa `npm run dev -- -p 3001`.
+
+## Licencia
+
+MIT. Úsalo, cámbialo y construye tu propio producto con él.
