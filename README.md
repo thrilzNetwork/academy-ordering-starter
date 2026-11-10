@@ -50,6 +50,17 @@ disponible. La portada (`app/page.js`) los agrupa por categoría y cada uno tien
 **Regla importante:** el carrito guarda solo el `id` y la cantidad. El precio siempre se lee del catálogo. Si el precio
 viviera en el carrito, cualquiera podría cambiarlo desde su navegador.
 
+## Paso 4: guardar pedidos
+
+- `components/Checkout.js`: datos del cliente, pago **simulado** y confirmación.
+- `app/api/orders/route.js`: el servidor recibe el pedido, lo revisa con `lib/orders.js` y lo guarda.
+- `lib/store.js`: dónde se guarda. Sin configurar nada funciona en **modo demo** (memoria, se borra al reiniciar).
+  Para guardar de verdad, crea un proyecto gratis en [Supabase](https://supabase.com), corre `supabase/orders.sql`
+  y pon `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY` en `.env.local` (copia `.env.example`).
+- Al final, el cliente abre WhatsApp con el pedido ya escrito y lo envía él. La tienda nunca escribe primero.
+
+**Prueba:** haz un pedido sin teléfono. Luego uno con delivery y sin dirección. El servidor debe rechazarlos.
+
 ## Licencia
 
 MIT. Úsalo, cámbialo y construye tu propio producto con él.

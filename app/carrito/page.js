@@ -1,17 +1,21 @@
 "use client";
 
+import { useState } from "react";
 import { useCart } from "../../components/CartProvider";
+import Checkout, { Confirmation } from "../../components/Checkout";
 import { allProducts, money } from "../../lib/products";
 import { cartTotal, priceLines } from "../../lib/cart";
 import { STORE } from "../../lib/config";
 
 export default function CartPage() {
   const { cart, loaded, set } = useCart();
+  const [done, setDone] = useState(null); // pedido recién enviado: se muestra aunque el carrito ya esté vacío
   const products = allProducts();
   if (!loaded) return null;
+  if (done) return <Confirmation done={done} store={STORE} />;
+
   const lines = priceLines(cart, products);
   const total = cartTotal(cart, products);
-
   if (lines.length === 0) {
     return (
       <div className="card stack">
@@ -41,7 +45,7 @@ export default function CartPage() {
         </table>
         <p className="price" style={{ textAlign: "right" }}>Total: {money(total, STORE.currency)}</p>
       </div>
-      <p className="muted">En el siguiente paso vas a agregar los datos de entrega y enviar el pedido.</p>
+      <Checkout store={STORE} onDone={setDone} />
     </div>
   );
 }
